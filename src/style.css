@@ -1,1 +1,47 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+body {
+  background-color: green;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin: none;
+  height: 100vh;
+}
+.carta {
+  background-color: white;
+  display: inline-block;
+  margin: auto;
+  height: 400px;
+  width: 250px;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid black;
+  position: absolute;
+}
+
+.header {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 80px;
+}
+.footer {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 80px;
+  transform: rotate(180deg);
+}
+.number {
+  font-size: 80px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  height: 150px;
+  padding-top: 90px;
+}
+
+#btn {
+  margin-top: 100px;
+  margin-left: 615px;
+}
