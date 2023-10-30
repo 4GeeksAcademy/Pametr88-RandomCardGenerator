@@ -5,9 +5,18 @@ import "./style.css";
 import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
-window.onload = function() {
+window.onload = () => {
   //write your code here
-  let number = [
+  document.querySelector(".carta").classList.add(generaRandomSuite());
+  document.querySelector(".carta").innerHTML = generaRandomNumber();
+  setTimeout(() => {
+    document.querySelector(".carta").classList.remove("heart");
+    document.querySelector(".carta").classList.add("spade");
+  }, 1000);
+};
+
+let generaRandomNumber = () => {
+  let numbers = [
     "A",
     "2",
     "3",
@@ -22,10 +31,12 @@ window.onload = function() {
     "Q",
     "K"
   ];
-  let numero1 = number[Math.floor(Math.random() * number.length)];
-  document.querySelector(".cambio").innerHTML = numero1;
+  let indexNumbers = Math.floor(Math.random() * numbers.length);
+  return numbers[indexNumbers];
+};
 
-  let figure = ["&hearts", "&diamond", "&clubs"];
-  let figura1 = figure[Math.floor(Math.random() * figure.length)];
-  document.querySelector(".figure").innerHTML = figura1;
+let generaRandomSuite = () => {
+  let suit = ["diamond", "spade", "heart", "club"];
+  let indexSuit = Math.floor(Math.random() * suit.length);
+  return suit[indexSuit];
 };
